@@ -128,11 +128,6 @@ md-card md-card-title md-card-title-text:only-child .md-subhead {
     flex-wrap: wrap;
 }
 
-.feature-list .infopanel {
-    height: 100%;
-    background-color: #eaf1dd;
-}
-
 @media (min-width: 600px) { /* gt-xs */
 }
 
