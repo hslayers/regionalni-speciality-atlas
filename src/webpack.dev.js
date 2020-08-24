@@ -30,7 +30,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      TESTING_ENDPOINT: JSON.stringify('https://db.atlasbestpractices.com'),
+      ENDPOINT: JSON.stringify('https://db.atlasbestpractices.com'),
     }),
   ],
   module: {

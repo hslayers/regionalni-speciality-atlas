@@ -55,6 +55,7 @@ module.directive('hs', function(HsMapService, HsCore) {
 const caturl = '/php/metadata/csw/index.php';
 
 module.value('HsConfig', {
+	proxyPrefix: '/proxy/',
 	appLogo: require('./img/regspec_logo.jpg').default,
 	design: 'md',
 	importCss: false,
