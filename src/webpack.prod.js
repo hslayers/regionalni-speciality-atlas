@@ -36,7 +36,7 @@ module.exports = merge(common, {
     // see https://webpack.js.org/guides/caching#module-identifiers
     new webpack.HashedModuleIdsPlugin(),
     new webpack.DefinePlugin({
-      TESTING_ENDPOINT: JSON.stringify('https://db.atlasbestpractices.com'),
+      ENDPOINT: JSON.stringify('https://db.atlasbestpractices.com'),
     }),
   ],
   optimization: {
