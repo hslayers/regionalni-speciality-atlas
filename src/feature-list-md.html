@@ -30,10 +30,10 @@
                 </md-card-title-text>
             </md-card-title>
             <md-card-content>
-                <p ng-bind-html="feature.getProperties().annotation"></p>
+                <p ng-bind-html="feature.getProperties().product_service_list"></p>
             </md-card-content>
         </md-card>
     </md-content>
 
-    <hs.query.directive-infopanel-md class="infopanel" ng-show="featureDetails"></hs.query.directive-infopanel-md>
+    <hs.query.directive-infopanel-md class="infopanel" ng-if="featureDetails"></hs.query.directive-infopanel-md>
 </div>

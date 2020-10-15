@@ -107,7 +107,7 @@ module.value('HsConfig', {
 			selectedStyle: new Style({
 				image: new Icon(({
 					crossOrigin: 'anonymous',
-					src: require('./img/regspec_ikona_prac.jpg').default,
+					src: require('./img/regspec_ikona_prac2.jpg').default,
 					anchor: [0.5, 0.5],
 					scale: 0.4,
 				}))
@@ -115,7 +115,7 @@ module.value('HsConfig', {
 			highlightedStyle: new Style({
 				image: new Icon(({
 					crossOrigin: 'anonymous',
-					src: require('./img/regspec_ikona_prac.jpg').default,
+					src: require('./img/regspec_ikona_prac2.jpg').default,
 					anchor: [0.5, 0.5],
 					scale: 0.4,
 				}))
