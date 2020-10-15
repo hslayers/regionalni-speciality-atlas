@@ -59,6 +59,13 @@ module.value('HsConfig', {
 	appLogo: require('./img/regspec_logo.jpg').default,
 	design: 'md',
 	importCss: false,
+	permalinkParameters: {
+	  center: false,
+	  featureURI: true,
+		hs_panel: false,
+		language: false,
+		layers: false
+	},
 	query: {
 		multi: false
 	},
