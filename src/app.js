@@ -56,6 +56,43 @@ module.directive('hs', function(HsMapService, HsCore) {
 
 const caturl = '/php/metadata/csw/index.php';
 
+const DEFAULT_ICON = 'farm_prod';
+
+const ICONS = {
+	'Gastronomie': 'gastro',
+	'Prodej ze dvora': 'farm_prod',
+	'Řemesla': 'remesla',
+	'Zážitková turistika': 'zazitky',
+};
+
+function styleFunction(feature) {
+	const ATR = feature.get('product_service_list');
+	const FILENAME = ATR in ICONS
+		? ICONS[ATR]
+		: DEFAULT_ICON;
+	return new Style({
+		image: new Icon({
+			src: require(`./img/${FILENAME}_65x65.png`).default,
+			anchor: [0.5, 0.5],
+			scale: 0.65,
+		})
+	});
+}
+
+function highlightedStyleFunction(feature) {
+	const ATR = feature.get('product_service_list');
+	const FILENAME = ATR in ICONS
+		? ICONS[ATR]
+		: DEFAULT_ICON;
+	return new Style({
+		image: new Icon({
+			src: require(`./img/${FILENAME}_s_65x65.png`).default,
+			anchor: [0.5, 0.5],
+			scale: 0.65,
+		})
+	});
+}
+
 module.value('HsConfig', {
 	proxyPrefix: '/proxy/',
 	appLogo: require('./img/regspec_logo.jpg').default,
@@ -105,30 +142,9 @@ module.value('HsConfig', {
 				format: new GeoJSON(),
 				url: 'https://db.atlasbestpractices.com/project-geo-json/3/',
 			}),
-			style: new Style({
-				image: new Icon(({
-					crossOrigin: 'anonymous',
-					src: require('./img/regspec_ikona_prac.jpg').default,
-					anchor: [0.5, 0.5],
-					scale: 0.4,
-				}))
-			}),
-			selectedStyle: new Style({
-				image: new Icon(({
-					crossOrigin: 'anonymous',
-					src: require('./img/regspec_ikona_prac2.jpg').default,
-					anchor: [0.5, 0.5],
-					scale: 0.4,
-				}))
-			}),
-			highlightedStyle: new Style({
-				image: new Icon(({
-					crossOrigin: 'anonymous',
-					src: require('./img/regspec_ikona_prac2.jpg').default,
-					anchor: [0.5, 0.5],
-					scale: 0.4,
-				}))
-			}),
+			style: styleFunction,
+			selectedStyle: highlightedStyleFunction,
+			highlightedStyle: highlightedStyleFunction,
 			featureURI: 'bp_uri',
 			ordering: {
 				primary: 'position',
@@ -137,10 +153,14 @@ module.value('HsConfig', {
 			},
 			hsFilters: [
 				{
-					title: 'Země',
-					valueField: 'country',
+					title: 'Kategorie',
+					valueField: 'product_service_list',
 					type: {
 						type: 'fieldset',
+					},
+					options: {
+						unselectText: 'Zrušit výběr',
+						selectText: 'Vybrat vše',
 					},
 					selected: undefined,
 					values: [],
