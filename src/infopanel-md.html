@@ -4,7 +4,7 @@
 
         <div flex></div>
 
-        <md-button class="md-icon-button" aria-label="Close" ng-click="deselectFeatures()">
+        <md-button class="md-icon-button notranslate" aria-label="Close" ng-click="deselectFeatures()">
             <md-icon md-menu-origin class="material-icons">close</md-icon>
         </md-button>
     </div>
@@ -12,7 +12,7 @@
 
 <md-content ng-show="featureDetails">
     <div class="img-float">
-        <hs-gallery ng-if="featureDetails.images.length > 0" images="featureDetails.images"></hs-gallery>
+        <hs-gallery ng-if="featureDetails.images.length > 0" images="featureDetails.images" class="notranslate"></hs-gallery>
     </div>
     <div class="content-body">
         <div class="main-content">
