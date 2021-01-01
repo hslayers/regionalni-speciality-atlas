@@ -8,7 +8,7 @@ import 'query.module';
 import 'gallery.module';
 import 'angular-material';
 import { Vector, Tile } from 'ol/layer';
-import { XYZ, Vector as VectorSource } from 'ol/source';
+import { OSM, XYZ, Vector as VectorSource } from 'ol/source';
 import { GeoJSON } from 'ol/format';
 import { Style, Icon } from 'ol/style';
 import { transform } from 'ol/proj';
@@ -129,10 +129,11 @@ module.value('HsConfig', {
 	},
 	default_layers: [
 		new Tile({
-			source: new XYZ({
-				attributions: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
-				url: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png?lang=en'
-			}),
+			source: new OSM(),
+			// source: new XYZ({
+			// 	attributions: ['Maps <a href="http://www.thunderforest.com">Thunderforest</a>', 'Data <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'],
+			// 	url: 'https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=820bd076452548f894e0059944475cb9',
+			// }),
 			title: 'Base layer',
 			base: true
 		}),
