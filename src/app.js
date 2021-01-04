@@ -94,6 +94,7 @@ function highlightedStyleFunction(feature) {
 }
 
 module.value('HsConfig', {
+	// proxyPrefix: '/cgi-bin/hsproxy.cgi?',
 	proxyPrefix: '/proxy/',
 	appLogo: require('./img/regspec_logo.jpg').default,
 	design: 'md',
@@ -129,11 +130,10 @@ module.value('HsConfig', {
 	},
 	default_layers: [
 		new Tile({
-			source: new OSM(),
-			// source: new XYZ({
-			// 	attributions: ['Maps <a href="http://www.thunderforest.com">Thunderforest</a>', 'Data <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'],
-			// 	url: 'https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=820bd076452548f894e0059944475cb9',
-			// }),
+			source: new XYZ({
+				attributions: ['Maps <a href="http://www.thunderforest.com">Thunderforest</a>', 'Data <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'],
+				url: 'https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=820bd076452548f894e0059944475cb9',
+			}),
 			title: 'Base layer',
 			base: true
 		}),
