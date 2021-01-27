@@ -8,7 +8,7 @@ import 'query.module';
 import 'gallery.module';
 import 'angular-material';
 import { Vector, Tile } from 'ol/layer';
-import { OSM, XYZ, Vector as VectorSource } from 'ol/source';
+import { XYZ, Vector as VectorSource } from 'ol/source';
 import { GeoJSON } from 'ol/format';
 import { Style, Icon } from 'ol/style';
 import { transform } from 'ol/proj';
