@@ -10,7 +10,10 @@
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
   function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'cs'}, 'google_translate_element');
+      new google.translate.TranslateElement({
+        pageLanguage: 'cs',
+        includedLanguages: 'en,cs,de',
+      }, 'google_translate_element');
   }
   </script>
   <% for (var css in htmlWebpackPlugin.files.css) { %>
