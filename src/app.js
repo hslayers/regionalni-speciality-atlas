@@ -167,6 +167,15 @@ module.value('HsConfig', {
 					values: [],
 					gatherValues: true
 				},
+				{
+					title: "Vyhledávání",
+					valueFields: ["name", "description"],
+					type: {
+						type: "fulltext",
+					},
+					idField: "bp_id",
+					suggestions: true
+				}
 			]
 		})
 	],
