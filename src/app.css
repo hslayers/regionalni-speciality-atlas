@@ -57,6 +57,20 @@ md-content .content-body .content-info * {
   justify-content: right !important;
 }
 
+.eshop-button {
+  margin-left: 16px;
+  margin-top: 20px;
+  padding-left: 0px !important;
+  background-color: rgb(141,110,99);
+  color: white;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.main-content > .md-button:hover{
+  background-color: rgb(78,52,46) !important;
+}
+
 /* md-content .main-content {
     background-color: initial;
 } */
