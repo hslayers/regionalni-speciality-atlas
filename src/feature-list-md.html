@@ -32,6 +32,9 @@
             <md-card-content>
                 <p ng-bind-html="feature.getProperties().product_service_list"></p>
             </md-card-content>
+            <span ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""' class="md-card-shopping-cart">
+              <md-icon md-font-set="fas" md-font-icon="fa-shopping-cart" aria-label="E-shop"></md-icon>
+            </span>
         </md-card>
     </md-content>
 
