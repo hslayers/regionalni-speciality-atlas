@@ -43,32 +43,28 @@ md-content .content-body .content-info * {
     display: none;
 }
 
-.md-card-shopping-cart {
-  margin: -44px 0 0 0;
-  z-index: 10;
+md-card {
+  position: relative;
+  display: block;
 }
 
-.fa-shopping-cart {
-  /*color: orange;*/
-  color: rgb(141,110,99);
-  font-size: 24px;
-  /*text-shadow: 2px 2px 2px black;*/
-  margin: 10px;
-  justify-content: right !important;
+md-card .top-left {
+  position: absolute;
+  left: 0.75em;
+  top: 0.5em;
+}
+
+div.feature-list md-card md-chip {
+  cursor: pointer;
+}
+
+div.feature-list md-card md-chip md-icon {
+  display: inline-block;
+  font-size: 20px;
 }
 
 .eshop-button {
-  margin-left: 16px;
-  margin-top: 20px;
-  padding-left: 0px !important;
-  background-color: rgb(141,110,99);
-  color: white;
-  height: 40px;
-  border-radius: 8px;
-}
-
-.main-content > .md-button:hover{
-  background-color: rgb(78,52,46) !important;
+  margin: 0;
 }
 
 /* md-content .main-content {
