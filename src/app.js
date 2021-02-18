@@ -94,7 +94,6 @@ function highlightedStyleFunction(feature) {
 }
 
 module.value('HsConfig', {
-	// proxyPrefix: '/cgi-bin/hsproxy.cgi?',
 	proxyPrefix: '/proxy/',
 	appLogo: require('./img/regspec_logo.jpg').default,
 	design: 'md',
