@@ -154,6 +154,15 @@ module.value('HsConfig', {
 			},
 			hsFilters: [
 				{
+					title: "Vyhledávání",
+					valueFields: ["name", "description"],
+					type: {
+						type: "fulltext",
+					},
+					idField: "bp_id",
+					suggestions: false
+				},
+				{
 					title: 'Kategorie',
 					valueField: 'product_service_list',
 					type: {
@@ -166,15 +175,6 @@ module.value('HsConfig', {
 					selected: undefined,
 					values: [],
 					gatherValues: true
-				},
-				{
-					title: "Vyhledávání",
-					valueFields: ["name", "description"],
-					type: {
-						type: "fulltext",
-					},
-					idField: "bp_id",
-					suggestions: true
 				}
 			]
 		})
