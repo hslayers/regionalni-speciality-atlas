@@ -164,9 +164,10 @@ module.value('HsConfig', {
 				},
 				{
 					title: 'Kategorie',
-					valueField: 'product_service_list',
+					valueField: 'tags',
 					type: {
-						type: 'fieldset',
+						type: 'arrayset',
+						parameters: 'or',
 					},
 					options: {
 						unselectText: 'Zrušit výběr',
@@ -175,7 +176,17 @@ module.value('HsConfig', {
 					selected: undefined,
 					values: [],
 					gatherValues: true
-				}
+				},
+				{
+					title: 'E-shop',
+					valueField: 'eshop_connect',
+					type: {
+						type: 'compare',
+						parameters: 'neq',
+					},
+					selected: false,
+					value: '',
+				},
 			]
 		})
 	],

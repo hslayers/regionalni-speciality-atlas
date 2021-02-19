@@ -23,11 +23,9 @@
             ng-mouseleave="unhighlightFeature(feature)"
             ng-class="feature.getProperties().class">
             <img ng-src="{{ endpoint + feature.getProperties().img }}" class="md-card-image" alt="Best Practice thumbnail">
-            <md-chips class="top-left" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
-                <md-chip>
-                    <md-icon md-icon-set="material-icons" aria-label="E-shop">shopping_cart</md-icon>E-shop
-                </md-chip>
-            </md-chips>
+            <md-button class="md-fab md-mini top-left" style="background-color: #fff" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
+                <md-icon md-icon-set="material-icons" aria-label="E-shop" style="color: #E0702E">shopping_cart</md-icon>
+            </md-button>
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{ feature.getProperties().name }}</span>
