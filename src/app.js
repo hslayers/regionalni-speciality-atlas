@@ -56,13 +56,15 @@ module.directive('hs', function(HsMapService, HsCore) {
 
 const caturl = '/php/metadata/csw/index.php';
 
-const DEFAULT_ICON = 'farm_prod';
+const DEFAULT_ICON = 'fp';
 
 const ICONS = {
-	'Gastronomie': 'gastro',
-	'Prodej ze dvora': 'farm_prod',
-	'Řemesla': 'remesla',
-	'Zážitková turistika': 'zazitky',
+	'Gastronomie': 'g',
+	'Prodej ze dvora': 'pzd',
+	'Řemesla': 'r',
+	'Zážitková turistika': 't',
+	'Ubytování': 'u',
+	'Farmářské produkty': 'fp',
 };
 
 function styleFunction(feature) {
@@ -72,9 +74,8 @@ function styleFunction(feature) {
 		: DEFAULT_ICON;
 	return new Style({
 		image: new Icon({
-			src: require(`./img/${FILENAME}_65x65.png`).default,
-			anchor: [0.5, 0.5],
-			scale: 0.65,
+			src: require(`./img/pin_${FILENAME}_1.png`).default,
+			anchor: [0.5, 1],
 		})
 	});
 }
@@ -86,9 +87,8 @@ function highlightedStyleFunction(feature) {
 		: DEFAULT_ICON;
 	return new Style({
 		image: new Icon({
-			src: require(`./img/${FILENAME}_s_65x65.png`).default,
-			anchor: [0.5, 0.5],
-			scale: 0.65,
+			src: require(`./img/pin_${FILENAME}_2.png`).default,
+			anchor: [0.5, 1],
 		})
 	});
 }
@@ -105,6 +105,7 @@ module.value('HsConfig', {
 		language: false,
 		layers: false
 	},
+	popupOffset: [0, -53],
 	query: {
 		multi: false
 	},
