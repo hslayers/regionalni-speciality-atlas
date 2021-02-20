@@ -193,8 +193,8 @@ module.value('HsConfig', {
 	//project_name: 'hslayers',
 	project_name: 'Material',
 	default_view: new View({
-		center: transform([13.6744581, 49.4027875], 'EPSG:4326', 'EPSG:3857'), //Latitude longitude	to Spherical Mercator
-		zoom: 8,
+		center: transform([13.3783262, 49.47857], 'EPSG:4326', 'EPSG:3857'), //Latitude longitude	to Spherical Mercator
+		zoom: 9,
 		units: 'm',
 		maxZoom: 15,
 		minZoom: 2,
