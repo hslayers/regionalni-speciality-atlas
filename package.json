@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-builders/custom-webpack": "^9.2.0",
     "@angular/animations": "~9.1.13",
     "@angular/common": "~9.1.13",
     "@angular/compiler": "~9.1.13",
@@ -19,6 +20,8 @@
     "@angular/platform-browser": "~9.1.13",
     "@angular/platform-browser-dynamic": "~9.1.13",
     "@angular/router": "~9.1.13",
+    "hslayers-ng": "file:../../../.npm-global/lib/node_modules/hslayers-ng",
+    "ol": "^6.5.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

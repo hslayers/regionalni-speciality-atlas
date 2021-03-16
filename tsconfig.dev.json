@@ -1,15 +1,18 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "types": []
+    "outDir": "out-tsc/app",
+    "types": [],
+    "paths": {
+      "hslayers-ng": ["node_modules/hslayers-ng/src/public-api.ts"]
+    }
   },
   "files": [
     "src/main.ts",
     "src/polyfills.ts"
   ],
   "include": [
-    "src/**/*.d.ts",
+    "./**/*.d.ts",
     "node_modules/hslayers-ng/src/**/*.ts"
   ],
   "exclude": [

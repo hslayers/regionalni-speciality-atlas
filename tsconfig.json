@@ -14,9 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "preserveSymlinks": true
   },
   "angularCompilerOptions": {
+    "enableResourceInlining": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }
