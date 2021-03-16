@@ -1,9 +1,9 @@
 {
-  "name": "hslayers-polirural-atlas",
+  "name": "hslayers-regionalni-speciality-atlas",
   "private": false,
   "version": "0.5.5",
-  "description": "HSLayers-NG Polirurual atlas",
-  "repository": "git+ssh://git@github.com:hslayers/polirural-atlas.git",
+  "description": "HSLayers-NG Regionální speciality atlas",
+  "repository": "git+ssh://git@github.com:hslayers/regionalni-speciality-atlas.git",
   "license": "MIT",
   "scripts": {
     "postinstall": "",
