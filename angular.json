@@ -33,6 +33,7 @@
             ],
             "preserveSymlinks": true,
             "styles": [
+              "node_modules/ol/ol.css",
               "src/styles.sass"
             ],
             "scripts": [],
