@@ -65,6 +65,9 @@ const ICONS = {
 	'Zážitková turistika': 't',
 	'Ubytování': 'u',
 	'Farmářské produkty': 'fp',
+	'Památky': 'h',
+	'Příroda': 'p',
+	'Muzea a galerie': 'm'
 };
 
 function styleFunction(feature) {
