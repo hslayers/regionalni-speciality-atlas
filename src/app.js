@@ -59,15 +59,14 @@ const caturl = '/php/metadata/csw/index.php';
 const DEFAULT_ICON = 'fp';
 
 const ICONS = {
-	'Gastronomie': 'g',
-	'Prodej ze dvora': 'pzd',
-	'Řemesla': 'r',
-	'Zážitková turistika': 't',
-	'Ubytování': 'u',
 	'Farmářské produkty': 'fp',
+	'Gastronomie': 'g',
+	'Muzea a galerie': 'm',
 	'Památky': 'h',
 	'Příroda': 'p',
-	'Muzea a galerie': 'm'
+	'Ubytování': 'u',
+	'Zážitky a aktivity': 't',
+	'Řemesla': 'r',
 };
 
 function styleFunction(feature) {
