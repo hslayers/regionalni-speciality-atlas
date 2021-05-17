@@ -143,7 +143,7 @@ module.value('HsConfig', {
 			title: 'Regionální speciality',
 			source: new VectorSource({
 				format: new GeoJSON(),
-				url: 'https://db.atlasbestpractices.com/project-geo-json/3/',
+				url: 'https://db.atlasbestpractices.com/data/project-geo-json/3/',
 			}),
 			style: styleFunction,
 			selectedStyle: highlightedStyleFunction,
