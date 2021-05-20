@@ -99,6 +99,21 @@ function highlightedStyleFunction(feature) {
 	});
 }
 
+function hiddenStyleFunction(feature) {
+	const ATR = feature.get('product_service_list');
+	const FILENAME = ATR in ICONS
+		? ICONS[ATR]
+		: DEFAULT_ICON;
+	return new Style({
+		image: new Icon({
+			src: require(`./img/pin_${FILENAME}_1.png`).default,
+			anchor: [0.5, 1],
+			opacity: 0.7,
+			scale: 0.4
+		})
+	});
+}
+
 module.value('HsConfig', {
 	proxyPrefix: '/proxy/',
 	appLogo: require('./img/regspec_logo.jpg').default,
@@ -154,6 +169,7 @@ module.value('HsConfig', {
 			style: styleFunction,
 			selectedStyle: highlightedStyleFunction,
 			highlightedStyle: highlightedStyleFunction,
+			hiddenStyle: hiddenStyleFunction,
 			featureURI: 'bp_uri',
 			ordering: {
 				primary: 'position',
