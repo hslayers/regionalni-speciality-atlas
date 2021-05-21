@@ -67,6 +67,10 @@ const ICONS = {
 	'Farmářské produkty': 'fp',
 };
 
+function northToSouth(a, b) {
+	return b.getGeometry().getCoordinates()[1] - a.getGeometry().getCoordinates()[1];
+}
+
 function styleFunction(feature) {
 	const ATR = feature.get('product_service_list');
 	const FILENAME = ATR in ICONS
@@ -158,6 +162,7 @@ module.value('HsConfig', {
 				format: new GeoJSON(),
 				url: 'https://db.atlasbestpractices.com/project-geo-json/3/',
 			}),
+			renderOrder: northToSouth,
 			style: styleFunction,
 			selectedStyle: highlightedStyleFunction,
 			highlightedStyle: highlightedStyleFunction,
