@@ -69,6 +69,10 @@ const ICONS = {
 	'Řemesla': 'r',
 };
 
+function northToSouth(a, b) {
+	return b.getGeometry().getCoordinates()[1] - a.getGeometry().getCoordinates()[1];
+}
+
 function styleFunction(feature) {
 	const ATR = feature.get('product_service_list');
 	const FILENAME = ATR in ICONS
@@ -145,6 +149,7 @@ module.value('HsConfig', {
 				format: new GeoJSON(),
 				url: 'https://db.atlasbestpractices.com/data/project-geo-json/3/',
 			}),
+			renderOrder: northToSouth,
 			style: styleFunction,
 			selectedStyle: highlightedStyleFunction,
 			highlightedStyle: highlightedStyleFunction,
