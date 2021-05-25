@@ -196,3 +196,7 @@ md-card md-card-title md-card-title-text:only-child .md-subhead {
 
 /* @media (min-width: 1920px) { /1* xl *1/ */
 /* } */
+
+.hs-gallery-slideshow {
+  background: initial;
+}
