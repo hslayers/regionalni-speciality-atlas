@@ -50,7 +50,11 @@ md-card {
 
 md-card .top-left {
   position: absolute;
+<<<<<<< HEAD
   left: 0.75em;
+=======
+  left: 0.5em;
+>>>>>>> origin/master
   top: 0.5em;
 }
 
@@ -196,3 +200,7 @@ md-card md-card-title md-card-title-text:only-child .md-subhead {
 
 /* @media (min-width: 1920px) { /1* xl *1/ */
 /* } */
+
+.hs-gallery-slideshow {
+  background: initial;
+}

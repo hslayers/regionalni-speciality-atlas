@@ -59,12 +59,23 @@ const caturl = '/php/metadata/csw/index.php';
 const DEFAULT_ICON = 'fp';
 
 const ICONS = {
+<<<<<<< HEAD
 	'Gastronomie': 'g',
 	'Prodej ze dvora': 'pzd',
 	'Řemesla': 'r',
 	'Zážitková turistika': 't',
 	'Ubytování': 'u',
 	'Farmářské produkty': 'fp',
+=======
+	'Farmářské produkty': 'fp',
+	'Gastronomie': 'g',
+	'Muzea a galerie': 'm',
+	'Památky': 'h',
+	'Příroda': 'p',
+	'Ubytování': 'u',
+	'Zážitky a aktivity': 't',
+	'Řemesla': 'r',
+>>>>>>> origin/master
 };
 
 function northToSouth(a, b) {
@@ -93,6 +104,7 @@ function highlightedStyleFunction(feature) {
 		image: new Icon({
 			src: require(`./img/pin_${FILENAME}_2.png`).default,
 			anchor: [0.5, 1],
+<<<<<<< HEAD
 		})
 	});
 }
@@ -108,6 +120,8 @@ function hiddenStyleFunction(feature) {
 			anchor: [0.5, 1],
 			opacity: 0.7,
 			scale: 0.4
+=======
+>>>>>>> origin/master
 		})
 	});
 }
@@ -160,7 +174,7 @@ module.value('HsConfig', {
 			title: 'Regionální speciality',
 			source: new VectorSource({
 				format: new GeoJSON(),
-				url: 'https://db.atlasbestpractices.com/project-geo-json/3/',
+				url: 'https://db.atlasbestpractices.com/data/project-geo-json/3/',
 			}),
 			renderOrder: northToSouth,
 			style: styleFunction,
@@ -185,9 +199,10 @@ module.value('HsConfig', {
 				},
 				{
 					title: 'Kategorie',
-					valueField: 'product_service_list',
+					valueField: 'tags',
 					type: {
-						type: 'fieldset',
+						type: 'arrayset',
+						parameters: 'or',
 					},
 					options: {
 						unselectText: 'Zrušit výběr',
@@ -196,15 +211,29 @@ module.value('HsConfig', {
 					selected: undefined,
 					values: [],
 					gatherValues: true
+<<<<<<< HEAD
 				}
+=======
+				},
+				{
+					title: 'E-shop',
+					valueField: 'eshop_connect',
+					type: {
+						type: 'compare',
+						parameters: 'neq',
+					},
+					selected: false,
+					value: '',
+				},
+>>>>>>> origin/master
 			]
 		})
 	],
 	//project_name: 'hslayers',
 	project_name: 'Material',
 	default_view: new View({
-		center: transform([13.6744581, 49.4027875], 'EPSG:4326', 'EPSG:3857'), //Latitude longitude	to Spherical Mercator
-		zoom: 8,
+		center: transform([13.3783262, 49.47857], 'EPSG:4326', 'EPSG:3857'), //Latitude longitude	to Spherical Mercator
+		zoom: 9,
 		units: 'm',
 		maxZoom: 15,
 		minZoom: 2,

@@ -23,20 +23,82 @@
             ng-mouseleave="unhighlightFeature(feature)"
             ng-class="feature.getProperties().class">
             <img ng-src="{{ endpoint + feature.getProperties().img }}" class="md-card-image" alt="Best Practice thumbnail">
+<<<<<<< HEAD
             <md-chips class="top-left" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
                 <md-chip>
                     <md-icon md-icon-set="material-icons" aria-label="E-shop">shopping_cart</md-icon>E-shop
                 </md-chip>
             </md-chips>
+=======
+            <md-button class="md-fab md-mini top-left" style="background-color: #fff" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
+                <md-icon md-icon-set="material-icons" aria-label="E-shop" style="color: #E0702E">shopping_cart</md-icon>
+            </md-button>
+>>>>>>> origin/master
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{ feature.getProperties().name }}</span>
                     <span class="md-subhead"><span ng-if="feature.getProperties().region">{{ feature.getProperties().region }}, </span>{{ feature.getProperties().country }}</span>
                 </md-card-title-text>
             </md-card-title>
+<<<<<<< HEAD
             <md-card-content>
                 <p ng-bind-html="feature.getProperties().tags.join(', ')"></p>
             </md-card-content>
+=======
+            <span class="md-subhead" style="display: flex; padding-left: 10px; float: right; line-height: initial;" >
+              <span style="display: flex; padding-right: 10px; line-height: initial;" ng-repeat="tag in feature.getProperties().tags" ng-switch="tag">
+                  <div flex></div>
+                  <md-icon
+                      ng-switch-when="Farmářské produkty"
+                      aria-label="Farmářské produkty">
+                      <img class="svg-icon" src="./img/fp.svg" style="height: 24px;">
+                      <md-tooltip>Farmářské produkty</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Ubytování"
+                      aria-label="Ubytování">
+                      <img class="svg-icon" src="./img/u.svg" style="height: 24px;">
+                      <md-tooltip>Ubytování</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Zážitky a aktivity"
+                      aria-label="Zážitky a aktivity">
+                      <img class="svg-icon" src="./img/t.svg" style="height: 24px;">
+                      <md-tooltip>Zážitky a aktivity</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Řemesla"
+                      aria-label="Řemesla">
+                      <img class="svg-icon" src="./img/r.svg" style="height: 24px;">
+                      <md-tooltip>Řemesla</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Gastronomie"
+                      aria-label="Gastronomie">
+                      <img class="svg-icon" src="./img/g.svg" style="height: 24px;">
+                      <md-tooltip>Gastronomie</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Památky"
+                      aria-label="Památky">
+                      <img class="svg-icon" src="./img/h.svg" style="height: 24px;">
+                      <md-tooltip>Památky</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Příroda"
+                      aria-label="Příroda">
+                      <img class="svg-icon" src="./img/p.svg" style="height: 24px;">
+                      <md-tooltip>Příroda</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Muzea a galerie"
+                      aria-label="Muzea a galerie">
+                      <img class="svg-icon" src="./img/m.svg" style="height: 24px;">
+                      <md-tooltip>Muzea a galerie</md-tooltip>
+                  </md-icon>
+              </span>
+            </span>
+>>>>>>> origin/master
         </md-card>
     </md-content>
 
