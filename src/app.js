@@ -75,6 +75,7 @@ function northToSouth(a, b) {
 
 function styleFunction(feature) {
 	const ATR = feature.get('main_category');
+	const inn = document.getElementById('filtered');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
 		: DEFAULT_ICON;
@@ -82,6 +83,7 @@ function styleFunction(feature) {
 		image: new Icon({
 			src: require(`./img/pin_${FILENAME}_1.png`).default,
 			anchor: [0.5, 1],
+			scale: inn.value/100.0
 		})
 	});
 }
@@ -101,6 +103,7 @@ function highlightedStyleFunction(feature) {
 
 function hiddenStyleFunction(feature) {
 	const ATR = feature.get('product_service_list');
+	const outn = document.getElementById('filteredout');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
 		: DEFAULT_ICON;
@@ -109,7 +112,7 @@ function hiddenStyleFunction(feature) {
 			src: require(`./img/pin_${FILENAME}_1.png`).default,
 			anchor: [0.5, 1],
 			opacity: 0.7,
-			scale: 0.4
+			scale: outn.value/100.0
 		})
 	});
 }
