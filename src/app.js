@@ -74,7 +74,7 @@ function northToSouth(a, b) {
 }
 
 function styleFunction(feature) {
-	const ATR = feature.get('product_service_list');
+	const ATR = feature.get('main_category');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
 		: DEFAULT_ICON;
@@ -87,7 +87,7 @@ function styleFunction(feature) {
 }
 
 function highlightedStyleFunction(feature) {
-	const ATR = feature.get('product_service_list');
+	const ATR = feature.get('main_category');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
 		: DEFAULT_ICON;
