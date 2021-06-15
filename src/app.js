@@ -116,6 +116,7 @@ module.value('HsConfig', {
 		multi: false
 	},
 	queryPoint: 'hidden',
+	selectionZoomStep: 20,
 	sidebarToggleable: false,
 	panelWidths: {
 		default: '60%',
@@ -203,7 +204,7 @@ module.value('HsConfig', {
 		center: transform([13.3783262, 49.47857], 'EPSG:4326', 'EPSG:3857'), //Latitude longitude	to Spherical Mercator
 		zoom: 9,
 		units: 'm',
-		maxZoom: 15,
+		maxZoom: 16,
 		minZoom: 2,
 		constrainResolution: true,
 	}),
