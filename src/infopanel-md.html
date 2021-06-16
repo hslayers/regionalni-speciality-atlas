@@ -28,8 +28,11 @@
             <h3 ng-if="featureDetails.description" class="heading">Popis</h3>
             <p class="content-info" ng-if="featureDetails.description" ng-bind-html="featureDetails.description"></p>
 
-            <h3 ng-if="featureDetails.contact" class="heading">Kontakt</h3>
-            <p class="content-info" ng-if="featureDetails.contact" ng-bind-html="featureDetails.contact"></p>
+            <h3 ng-if="featureDetails.street || featureDetails.city || featureDetails.zip_code || featureDetails.phone || featureDetails.e_mail || featureDetails.website" class="heading">Kontakt</h3>
+            <p class="content-info contact" ng-if="featureDetails.street || featureDetails.city || featureDetails.zip_code">{{ [featureDetails.street, featureDetails.zip_code, featureDetails.city].join(', ') }}<br></p>
+            <p class="content-info contact" ng-if="featureDetails.phone && featureDetails.eshop_connect">Telefon: {{ featureDetails.phone }}</p>
+            <p class="content-info contact" ng-if="featureDetails.e_mail && featureDetails.eshop_connect">E-mail: {{ featureDetails.e_mail }}</p>
+            <p class="content-info contact" ng-if="featureDetails.website && featureDetails.eshop_connect">Web: {{ featureDetails.website }}</p>
 
             <p class="content-info" ng-if='featureDetails.eshop_connect && featureDetails.eshop_connect != ""'>
                 <md-button class="md-primary md-raised eshop-button" ng-href="{{ featureDetails.eshop_connect }}" target="_blank" style="padding-top: 0;">
