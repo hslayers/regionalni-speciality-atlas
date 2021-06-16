@@ -89,6 +89,11 @@ md-content .additional-content .heading {
     padding-top: 16px;
 } */
 
+md-content .content-info.contact {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 div.feature-list:not(.card-list) md-content {
     background-color: #eaf1dd;
 }
