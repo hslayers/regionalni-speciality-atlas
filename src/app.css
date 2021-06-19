@@ -63,6 +63,18 @@ div.feature-list md-card md-chip md-icon {
   font-size: 20px;
 }
 
+md-card.feature {
+  display: flex;
+}
+
+md-card.filtered-out.feature {
+  filter: grayscale(75%);
+}
+
+md-card.feature md-card-actions span {
+  margin-left: 6px;
+}
+
 .eshop-button {
   margin: 0;
 }
