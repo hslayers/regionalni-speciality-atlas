@@ -82,6 +82,7 @@ function styleFunction(feature) {
 		image: new Icon({
 			src: require(`./img/pin_${FILENAME}_1.png`).default,
 			anchor: [0.5, 1],
+			scale: 0.8
 		})
 	});
 }
@@ -95,6 +96,7 @@ function highlightedStyleFunction(feature) {
 		image: new Icon({
 			src: require(`./img/pin_${FILENAME}_2.png`).default,
 			anchor: [0.5, 1],
+			scale: 0.8
 		})
 	});
 }
@@ -108,8 +110,8 @@ function hiddenStyleFunction(feature) {
 		image: new Icon({
 			src: require(`./img/pin_${FILENAME}_1.png`).default,
 			anchor: [0.5, 1],
-			opacity: 0.7,
-			scale: 0.4
+			opacity: 0.8,
+			scale: 0.5
 		})
 	});
 }
@@ -126,7 +128,7 @@ module.value('HsConfig', {
 		language: false,
 		layers: false
 	},
-	popupOffset: [0, -53],
+	popupOffset: [0, -42], // 100%: -53
 	query: {
 		multi: false
 	},
