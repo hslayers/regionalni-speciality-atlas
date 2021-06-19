@@ -26,7 +26,7 @@
             ng-click="selectFeature(feature)"
             ng-mouseenter="highlightFeature(feature)"
             ng-mouseleave="unhighlightFeature(feature)"
-            ng-class="'feature' + feature.getProperties().class">
+            ng-class="'feature ' + feature.getProperties().class">
             <img ng-src="{{ endpoint + feature.getProperties().img }}" class="md-card-image" alt="Best Practice thumbnail">
             <md-button class="md-fab md-mini top-left" style="background-color: #fff" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
                 <md-icon md-icon-set="material-icons" aria-label="E-shop" style="color: #E0702E">shopping_cart</md-icon>
@@ -105,7 +105,7 @@
             ng-click="selectFeature(feature)"
             ng-mouseenter="highlightFeature(feature)"
             ng-mouseleave="unhighlightFeature(feature)"
-            ng-class="'feature filtered-out' + feature.getProperties().class"
+            ng-class="'feature filtered-out ' + feature.getProperties().class"
             style="filter: grayscale(75%)">
             <img ng-src="{{ endpoint + feature.getProperties().img }}" class="md-card-image" alt="Best Practice thumbnail">
             <md-button class="md-fab md-mini top-left" style="background-color: #fff" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
