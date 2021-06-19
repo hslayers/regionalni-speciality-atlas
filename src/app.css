@@ -93,6 +93,10 @@ div.feature-list:not(.card-list) md-content {
     background-color: #eaf1dd;
 }
 
+md-card.filtered-out-feature {
+  filter: grayscale(75%);
+}
+
 md-content table tr:nth-child(odd) {
     background-color: #d6e3bc;
 }

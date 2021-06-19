@@ -95,12 +95,12 @@
 
     <md-content flex layout-padding ng-show="!featureDetails && LayMan.currentLayer.filteredOutFeatures.length > 0">
       <md-divider></md-divider>
-      <p style="text-align:center;display:block;color: rgb(78,52,46)" ng-if="LayMan.currentLayer.filteredOutFeatures.length > 0">
-        další místa
-      </p>
+      <md-subheader ng-if="LayMan.currentLayer.filteredOutFeatures.length > 0" style="background-color: rgb(255, 255, 255);padding: 0;">
+          Další místa
+      </md-subheader>
     </md-content>
 
-    <md-content flex layout-padding class="card-collection" ng-show="!featureDetails">
+    <md-content flex layout-padding class="card-collection" ng-show="!featureDetails" style="padding-top: 0;">
         <md-card ng-repeat="feature in LayMan.currentLayer.filteredOutFeatures | orderBy:orderProperties"
             ng-click="selectFeature(feature)"
             ng-mouseenter="highlightFeature(feature)"
