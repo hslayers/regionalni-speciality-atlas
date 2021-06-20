@@ -168,10 +168,11 @@ module.value('HsConfig', {
 				url: 'https://db.atlasbestpractices.com/data/project-geo-json/3/',
 			}),
 			renderOrder: northToSouth,
-			style: styleFunction,
+			style: hiddenStyleFunction,
 			selectedStyle: highlightedStyleFunction,
 			highlightedStyle: highlightedStyleFunction,
 			hiddenStyle: hiddenStyleFunction,
+			filteredStyle: styleFunction,
 			featureURI: 'bp_uri',
 			ordering: {
 				primary: 'position',
