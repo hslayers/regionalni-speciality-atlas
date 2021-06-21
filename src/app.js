@@ -73,7 +73,21 @@ function northToSouth(a, b) {
 	return b.getGeometry().getCoordinates()[1] - a.getGeometry().getCoordinates()[1];
 }
 
-function styleFunction(feature) {
+function style(feature) {
+	const ATR = feature.get('main_category');
+	const FILENAME = ATR in ICONS
+		? ICONS[ATR]
+		: DEFAULT_ICON;
+	return new Style({
+		image: new Icon({
+			src: require(`./img/pin_${FILENAME}_1.png`).default,
+			anchor: [0.5, 1],
+			scale: 0.5
+		})
+	});
+}
+
+function matchedStyle(feature) {
 	const ATR = feature.get('main_category');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
@@ -87,7 +101,7 @@ function styleFunction(feature) {
 	});
 }
 
-function highlightedStyleFunction(feature) {
+function highlightedStyle(feature) {
 	const ATR = feature.get('main_category');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
@@ -101,8 +115,8 @@ function highlightedStyleFunction(feature) {
 	});
 }
 
-function hiddenStyleFunction(feature) {
-	const ATR = feature.get('product_service_list');
+function filteredOutStyle(feature) {
+	const ATR = feature.get('main_category');
 	const FILENAME = ATR in ICONS
 		? ICONS[ATR]
 		: DEFAULT_ICON;
@@ -168,11 +182,11 @@ module.value('HsConfig', {
 				url: 'https://db.atlasbestpractices.com/data/project-geo-json/3/',
 			}),
 			renderOrder: northToSouth,
-			style: hiddenStyleFunction,
-			selectedStyle: highlightedStyleFunction,
-			highlightedStyle: highlightedStyleFunction,
-			hiddenStyle: hiddenStyleFunction,
-			filteredStyle: styleFunction,
+			style: style,
+			selectedStyle: highlightedStyle,
+			highlightedStyle: highlightedStyle,
+			filteredOutStyle: filteredOutStyle,
+			matchedStyle: matchedStyle,
 			featureURI: 'bp_uri',
 			ordering: {
 				primary: 'position',
