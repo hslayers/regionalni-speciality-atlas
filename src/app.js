@@ -160,7 +160,7 @@ module.value('HsConfig', {
 	},
 	directiveTemplates: {
 		'md-sidenav': require('sidenav.html'),
-		layout: require('layoutmd.html'),
+		'layout': require('layoutmd.html'),
 		'md-overlay': require('overlay.html'),
 		'md-toolbar': require('toolbar.html'),
 		'feature-list': require('feature-list-md.html'),

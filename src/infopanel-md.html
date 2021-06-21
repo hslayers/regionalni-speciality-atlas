@@ -1,20 +1,15 @@
-<md-toolbar class="md-hue-1" ng-show="featureDetails">
-    <div class="md-toolbar-tools">
-        <h2 class="md-flex">{{ featureDetails.name }}</h2>
-
-        <div flex></div>
-
-        <md-button class="md-icon-button" aria-label="Close" ng-click="deselectFeatures()">
-            <md-icon md-menu-origin class="material-icons">close</md-icon>
-        </md-button>
-    </div>
-</md-toolbar>
-
 <md-content ng-show="featureDetails">
-    <div class="img-float">
-        <hs-gallery ng-if="featureDetails.images.length > 0" images="featureDetails.images"></hs-gallery>
-    </div>
     <div class="content-body">
+        <div class="hs-infopanel-header">
+            <h2 class="heading md-flex">{{ featureDetails.name }}</h2>
+            <div flex></div>
+            <md-button class="md-icon-button close" aria-label="Zavřít" ng-click="deselectFeatures()">
+                <md-icon class="material-icon">close</md-icon>
+            </md-button>
+        </div>
+        <div class="img-float">
+            <hs-gallery ng-if="featureDetails.images.length > 0" images="featureDetails.images"></hs-gallery>
+        </div>
         <div class="main-content">
             <h2><span ng-if="featureDetails.region">{{ featureDetails.region }}, </span>{{ featureDetails.country }}</h2>
             <!-- <p class="content-info" ng-repeat="url in featureDetails.website.split(',')" ng-if="featureDetails.website"><a target="_blank" ng-href="{{url}}">{{ url }}</a></p> -->
@@ -22,17 +17,14 @@
             <h3 ng-if="featureDetails.open_hours" class="heading">Otevírací doba</h3>
             <p class="content-info" ng-if="featureDetails.open_hours" ng-bind-html="featureDetails.open_hours"></p>
 
-            <h3 ng-if="featureDetails.tags" class="heading">Kategorie</h3>
-            <p class="content-info" ng-if="featureDetails.tags">{{ featureDetails.tags.join(', ') }}</p>
-
-            <h3 ng-if="featureDetails.description" class="heading">Popis</h3>
-            <p class="content-info" ng-if="featureDetails.description" ng-bind-html="featureDetails.description"></p>
-
             <h3 ng-if="featureDetails.street || featureDetails.city || featureDetails.zip_code || featureDetails.phone || featureDetails.e_mail || featureDetails.website" class="heading">Kontakt</h3>
             <p class="content-info contact" ng-if="featureDetails.street || featureDetails.city || featureDetails.zip_code">{{ [featureDetails.street, featureDetails.zip_code, featureDetails.city].join(', ') }}<br></p>
             <p class="content-info contact" ng-if="featureDetails.phone && featureDetails.eshop_connect">Telefon: {{ featureDetails.phone }}</p>
             <p class="content-info contact" ng-if="featureDetails.e_mail && featureDetails.eshop_connect">E-mail: {{ featureDetails.e_mail }}</p>
             <p class="content-info contact" ng-if="featureDetails.website && featureDetails.eshop_connect">Web: {{ featureDetails.website }}</p>
+
+            <h3 ng-if="featureDetails.tags" class="heading">Kategorie</h3>
+            <p class="content-info" ng-if="featureDetails.tags">{{ featureDetails.tags.join(', ') }}</p>
 
             <p class="content-info" ng-if='featureDetails.eshop_connect && featureDetails.eshop_connect != ""'>
                 <md-button class="md-primary md-raised eshop-button" ng-href="{{ featureDetails.eshop_connect }}" target="_blank" style="padding-top: 0;">
@@ -41,10 +33,22 @@
                   Nakupte na e-shopu
                 </md-button>
             </p>
+        </div>
+        <div class="additional-content">
+            <md-tabs md-dynamic-height>
+                <md-tab ng-if="featureDetails.description" label="popis">
+                    <md-content>
+                        <p class="content-info" ng-if="featureDetails.description" ng-bind-html="featureDetails.description"></p>
+                    </md-content>
+                </md-tab>
 
-            <h3 ng-if="featureDetails.videos.length > 0" class="heading">Videa</h3>
-            <div ng-if="featureDetails.videos.length > 0" ng-repeat="video in featureDetails.videos" ng-bind-html="parseVideo(video)" class="video">
-            </div>
+                <md-tab ng-if="featureDetails.videos.length > 0" label="videa">
+                    <md-content>
+                        <div ng-if="featureDetails.videos.length > 0" ng-repeat="video in featureDetails.videos" ng-bind-html="parseVideo(video)" class="video">
+                        </div>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
         </div>
     </div>
 </md-content>
