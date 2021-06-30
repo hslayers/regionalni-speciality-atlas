@@ -1,7 +1,9 @@
 <md-content ng-show="featureDetails">
     <div class="content-body">
         <div class="hs-infopanel-header">
-            <h2 class="heading md-flex">{{ featureDetails.name }}</h2>
+          <md-content layout-padding style="padding-bottom:0">
+            <img ng-if="config.appLogo" ng-src="{{ config.appLogo }}" alt="Application logo" style="max-height: 48px;">
+          </md-content>
             <div flex></div>
             <md-button class="md-icon-button close" aria-label="Zavřít" ng-click="deselectFeatures()">
                 <md-icon class="material-icon">close</md-icon>
@@ -11,6 +13,7 @@
             <hs-gallery ng-if="featureDetails.images.length > 0" images="featureDetails.images"></hs-gallery>
         </div>
         <div class="main-content">
+            <h2 class="heading md-flex" style="padding-top:16px">{{ featureDetails.name }}</h2>
             <h2><span ng-if="featureDetails.region">{{ featureDetails.region }}, </span>{{ featureDetails.country }}</h2>
             <!-- <p class="content-info" ng-repeat="url in featureDetails.website.split(',')" ng-if="featureDetails.website"><a target="_blank" ng-href="{{url}}">{{ url }}</a></p> -->
 
