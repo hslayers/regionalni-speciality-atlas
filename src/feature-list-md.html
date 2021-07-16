@@ -32,64 +32,73 @@
             <md-button class="md-fab md-mini top-left" style="background-color: #fff" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
                 <md-icon md-icon-set="material-icons" aria-label="E-shop" style="color: #E0702E">shopping_cart</md-icon>
             </md-button>
+            <md-card-actions style="margin-top: -36px" layout="row" layout-align="end center">
+              <span ng-repeat="tag in feature.getProperties().tags" ng-switch="tag">
+                <md-button class="md-fab" style="background-color: #fff; min-height:28px; height: 28px; width:28px;">
+                  <md-icon
+                      ng-switch-when="Farmářské produkty"
+                      aria-label="Farmářské produkty"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/fp.svg" style="height: 18px">
+                      <md-tooltip>Farmářské produkty</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Ubytování"
+                      aria-label="Ubytování"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/u.svg" style="height: 18px">
+                      <md-tooltip>Ubytování</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Zážitky a aktivity"
+                      aria-label="Zážitky a aktivity"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/t.svg" style="height: 18px">
+                      <md-tooltip>Zážitky a aktivity</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Řemesla"
+                      aria-label="Řemesla"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/r.svg" style="height: 18px">
+                      <md-tooltip>Řemesla</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Gastronomie"
+                      aria-label="Gastronomie"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/g.svg" style="height: 18px">
+                      <md-tooltip>Gastronomie</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Památky"
+                      aria-label="Památky"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/h.svg" style="height: 18px">
+                      <md-tooltip>Památky</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Příroda"
+                      aria-label="Příroda"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/p.svg" style="height: 18px">
+                      <md-tooltip>Příroda</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Muzea a galerie"
+                      aria-label="Muzea a galerie"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/m.svg" style="height: 18px">
+                      <md-tooltip>Muzea a galerie</md-tooltip>
+                  </md-icon>
+                </md-button>
+              </span>
+            </md-card-actions>
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{ feature.getProperties().name }}</span>
                 </md-card-title-text>
             </md-card-title>
-            <div flex></div>
-            <md-card-actions layout="row" layout-align="end center">
-              <span ng-repeat="tag in feature.getProperties().tags" ng-switch="tag">
-                  <md-icon
-                      ng-switch-when="Farmářské produkty"
-                      aria-label="Farmářské produkty">
-                      <img class="svg-icon" src="./img/fp.svg" style="height: 24px;">
-                      <md-tooltip>Farmářské produkty</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Ubytování"
-                      aria-label="Ubytování">
-                      <img class="svg-icon" src="./img/u.svg" style="height: 24px;">
-                      <md-tooltip>Ubytování</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Zážitky a aktivity"
-                      aria-label="Zážitky a aktivity">
-                      <img class="svg-icon" src="./img/t.svg" style="height: 24px;">
-                      <md-tooltip>Zážitky a aktivity</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Řemesla"
-                      aria-label="Řemesla">
-                      <img class="svg-icon" src="./img/r.svg" style="height: 24px;">
-                      <md-tooltip>Řemesla</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Gastronomie"
-                      aria-label="Gastronomie">
-                      <img class="svg-icon" src="./img/g.svg" style="height: 24px;">
-                      <md-tooltip>Gastronomie</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Památky"
-                      aria-label="Památky">
-                      <img class="svg-icon" src="./img/h.svg" style="height: 24px;">
-                      <md-tooltip>Památky</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Příroda"
-                      aria-label="Příroda">
-                      <img class="svg-icon" src="./img/p.svg" style="height: 24px;">
-                      <md-tooltip>Příroda</md-tooltip>
-                  </md-icon>
-                  <md-icon
-                      ng-switch-when="Muzea a galerie"
-                      aria-label="Muzea a galerie">
-                      <img class="svg-icon" src="./img/m.svg" style="height: 24px;">
-                      <md-tooltip>Muzea a galerie</md-tooltip>
-                  </md-icon>
-              </span>
-            </md-card-actions>
         </md-card>
     </md-content>
 
@@ -111,65 +120,73 @@
             <md-button class="md-fab md-mini top-left" style="background-color: #fff" ng-if='feature.getProperties().eshop_connect && feature.getProperties().eshop_connect != ""'>
                 <md-icon md-icon-set="material-icons" aria-label="E-shop" style="color: #E0702E">shopping_cart</md-icon>
             </md-button>
+            <md-card-actions style="margin-top: -36px" layout="row" layout-align="end center">
+              <span ng-repeat="tag in feature.getProperties().tags" ng-switch="tag">
+                <md-button class="md-fab" style="background-color: #fff; min-height:28px; height: 28px; width:28px;">
+                  <md-icon
+                      ng-switch-when="Farmářské produkty"
+                      aria-label="Farmářské produkty"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/fp.svg" style="height: 18px">
+                      <md-tooltip>Farmářské produkty</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Ubytování"
+                      aria-label="Ubytování"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/u.svg" style="height: 18px">
+                      <md-tooltip>Ubytování</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Zážitky a aktivity"
+                      aria-label="Zážitky a aktivity"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/t.svg" style="height: 18px">
+                      <md-tooltip>Zážitky a aktivity</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Řemesla"
+                      aria-label="Řemesla"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/r.svg" style="height: 18px">
+                      <md-tooltip>Řemesla</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Gastronomie"
+                      aria-label="Gastronomie"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/g.svg" style="height: 18px">
+                      <md-tooltip>Gastronomie</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Památky"
+                      aria-label="Památky"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/h.svg" style="height: 18px">
+                      <md-tooltip>Památky</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Příroda"
+                      aria-label="Příroda"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/p.svg" style="height: 18px">
+                      <md-tooltip>Příroda</md-tooltip>
+                  </md-icon>
+                  <md-icon
+                      ng-switch-when="Muzea a galerie"
+                      aria-label="Muzea a galerie"
+                      style="margin: 5px 0px 0px -4px;">
+                      <img class="svg-icon" src="./img/m.svg" style="height: 18px">
+                      <md-tooltip>Muzea a galerie</md-tooltip>
+                  </md-icon>
+                </md-button>
+              </span>
+            </md-card-actions>
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{ feature.getProperties().name }}</span>
-                    <span class="md-subhead"><span ng-if="feature.getProperties().region">{{ feature.getProperties().region }}, </span>{{ feature.getProperties().country }}</span>
                 </md-card-title-text>
             </md-card-title>
-            <div flex></div>
-            <md-card-actions layout="row" layout-align="end center">
-                <span ng-repeat="tag in feature.getProperties().tags" ng-switch="tag">
-                    <md-icon
-                      ng-switch-when="Farmářské produkty"
-                      aria-label="Farmářské produkty">
-                      <img class="svg-icon" src="./img/fp.svg" style="height: 24px;">
-                      <md-tooltip>Farmářské produkty</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Ubytování"
-                      aria-label="Ubytování">
-                      <img class="svg-icon" src="./img/u.svg" style="height: 24px;">
-                      <md-tooltip>Ubytování</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Zážitky a aktivity"
-                      aria-label="Zážitky a aktivity">
-                      <img class="svg-icon" src="./img/t.svg" style="height: 24px;">
-                      <md-tooltip>Zážitky a aktivity</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Řemesla"
-                      aria-label="Řemesla">
-                      <img class="svg-icon" src="./img/r.svg" style="height: 24px;">
-                      <md-tooltip>Řemesla</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Gastronomie"
-                      aria-label="Gastronomie">
-                      <img class="svg-icon" src="./img/g.svg" style="height: 24px;">
-                      <md-tooltip>Gastronomie</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Památky"
-                      aria-label="Památky">
-                      <img class="svg-icon" src="./img/h.svg" style="height: 24px;">
-                      <md-tooltip>Památky</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Příroda"
-                      aria-label="Příroda">
-                      <img class="svg-icon" src="./img/p.svg" style="height: 24px;">
-                      <md-tooltip>Příroda</md-tooltip>
-                    </md-icon>
-                    <md-icon
-                      ng-switch-when="Muzea a galerie"
-                      aria-label="Muzea a galerie">
-                      <img class="svg-icon" src="./img/m.svg" style="height: 24px;">
-                      <md-tooltip>Muzea a galerie</md-tooltip>
-                    </md-icon>
-                </span>
-            </md-card-actions>
         </md-card>
     </md-content>
 
