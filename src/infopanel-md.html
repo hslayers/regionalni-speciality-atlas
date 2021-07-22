@@ -1,9 +1,9 @@
 <md-content ng-show="featureDetails">
     <div class="content-body">
         <div class="hs-infopanel-header">
-          <md-content layout-padding style="padding-bottom:0">
-            <img ng-if="config.appLogo" ng-src="{{ config.appLogo }}" alt="Application logo" style="max-height: 48px;">
-          </md-content>
+            <a ng-if="config.appLogo" href="https://sumavaprodukt.regionalnispeciality.cz/" style="padding: 16px">
+                <img ng-src="{{ config.appLogo }}" alt="Application logo" style="max-height: 48px;">
+            </a>
             <div flex></div>
             <md-button class="md-icon-button close" aria-label="Zavřít" ng-click="deselectFeatures()">
                 <md-icon class="material-icon">close</md-icon>
