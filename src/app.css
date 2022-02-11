@@ -3,6 +3,16 @@ button.attributions-button md-icon {
     color: rgba(93,64,55,0.75);
 }
 
+button.md-fab.md-mini.md-fab-32 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    line-height: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+}
+
 .ol-attribution {
     display: none;
 }

@@ -169,6 +169,7 @@ module.value('HsConfig', {
 		'md-toolbar': require('toolbar.html'),
 		'feature-list': require('feature-list-md.html'),
 		'query-info-panel-md': require('infopanel-md.html'),
+		'acknowledgement': require('acknowledgement.html')
 	},
 	default_layers: [
 		new Tile({
