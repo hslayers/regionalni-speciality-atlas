@@ -42,6 +42,10 @@ const module = angular.module('hs', [
 				'hue-1': '400'
 			})
 			.accentPalette('brown');
+	})
+
+	.config(function($sanitizeProvider) {
+		$sanitizeProvider.addValidAttrs(['style']);
 	});
 
 module.directive('hs', function(HsMapService, HsCore) {
