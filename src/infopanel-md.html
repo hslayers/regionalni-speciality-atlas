@@ -53,7 +53,7 @@
 
                 <md-tab ng-if="featureDetails.videos.length > 0" label="videa">
                     <md-content>
-                        <div ng-if="featureDetails.videos.length > 0" ng-repeat="video in featureDetails.videos" ng-bind-html="parseVideo(video)" class="video">
+                        <div ng-repeat="video in featureDetails.videos" ng-bind-html="parseVideo(video)" class="video">
                         </div>
                     </md-content>
                 </md-tab>
